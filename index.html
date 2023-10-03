@@ -13,12 +13,14 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Aspiring Software Engineer</p>
@@ -51,7 +53,7 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>App Development</span><br>Simple applications (Windows/Mobile) for everyday use.</li>
+                            <li><span>App Development</span><br>Simple applications (Windows/Mobile) for everyday use.<br>I've been learning and experimenting with WPF and .NET MAUI frameworks.</li>
                             <li><span>API Development</span><br>Working knowledge of ASP.NET Core Web API.</li>
                             <li><span>Web Development</span><br>How I built this site! Also learned ASP.NET Core MVC during MSSA.<br>Excited to learn more.</li>
                         </ul>
@@ -110,6 +112,37 @@
         </div>
     </div>
 
+    <!--CONTACT-->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>  rosauro.o.enriquez@outlook.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  (360) 689-9625</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rosauroenriquez/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/rosauroenriquez"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/resume.pdf" download class="btn btn2">Check My Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="someone@example.com" required>
+                        <textarea name="message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="credits">
+            <a href="https://www.youtube.com/watch?v=0YFrGy_mzjY&list=PLe8Jv1EdyFpf18dFerKqCfmPlRLq89f83&index=1&t=302s"><i class="fa-solid fa-hands-clapping"></i> Special Thanks to Kevin! Check him out.</a>
+        </div>
+        
+    </div>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -123,6 +156,15 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
         }
     </script>
     

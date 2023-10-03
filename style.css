@@ -220,3 +220,132 @@ nav ul li a:hover::after{
 .btn:hover {
     background: #0d43c3;
 }
+
+/*CONTACT*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-left p {
+    margin-top: 30px;
+
+}
+
+.contact-left p i {
+    color: #0d43c3;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+
+}
+
+.social-icons a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ababab;
+    /*color: #0d43c3;*/
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color: #0d43c3;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #0d43c3;
+}
+
+.contact-right form {
+    width: 100%;
+
+}
+
+form input, form textarea{
+    width:100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.credits{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    
+    margin-top: 20px;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.credits a i {
+    color: #0d43c3;
+}
+nav .fas{
+    display: none;
+}
+
+/*CSS FOR SMALL SCREEN*/
+@media only screen and (max-width: 600px){
+    #header {
+        background-image: url(images/phonebackground.png);
+    }
+    .header-text{
+        margin-top: 50%;
+        font-size: 20px;
+    }
+    .header-text h1{
+        
+        font-size: 40px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #0d43c3;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    }
