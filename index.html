@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross Enriquez Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/caeaf95591.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Software Engineer</p>
+                <h1><span>Navy Veteran</span>, <br>Future Software Developer!</h1>
+            </div>
+        </div>
+    </div>
+    <!--ABOUT-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Hi everyone, I am Rosauro "Ross" Enriquez. I am a US Navy Veteran. I served 8 years in the Navy as a Gas Turbine Electrical Technician.
+                        I specialized in operating, maintaining, and troubleshooting all kinds of electrical and electronic components within the Engineering Department.
+                        Some of the major systems I worked on include Engine Controllers, Control Consoles, Switchboards, etc.<br><br>It's been a goal of mine to be a software
+                        engineer. I fell in love with programming back when I was still a college student, and that is why after I finished my military service, I started learning how to code again.
+                        Currently, I am enrolled in Microsoft Software and Systems Academy (Cloud Application Development). I've been learning .NET, C#, and all the goodness this environment has to offer.
+                        I am aiming for Junior Developer roles and really excited to learn more about software development. I know with my unique skills and experiences in the Navy, plus my creativity in solving problems,
+                        I can be an asset to any team or organization.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>App Development</span><br>Simple applications (Windows/Mobile) for everyday use.</li>
+                            <li><span>API Development</span><br>Working knowledge of ASP.NET Core Web API.</li>
+                            <li><span>Web Development</span><br>How I built this site! Also learned ASP.NET Core MVC during MSSA.<br>Excited to learn more.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>JUL 2023 - PRESENT</span><br>Cloud Application Development at Microsoft Software and Systems Academy</li>
+                            <li><span>FEB 2021 - JUN 2023</span><br>Project Coordinator at US Navy SERMC</li>
+                            <li><span>JUN 2015 - JAN 2021</span><br>Lead Technician at USS Halsey DDG 97</li>
+                            <li><span>JUL 2013 - DEC 2013</span><br>Technical Support Representative at Sony VAIO</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>FEB 2023 - JUN 2023</span><br>CompTIA/ConnectWise A+ 17 Week Cohort</li>
+                            <li><span>OCT 2017 - JUN 2019</span><br>BS in Cybersecurity at Thomas Edison State University<br>15 Units earned while at sea!</li>
+                            <li><span>JUN 2009 - NOV 2012</span><br>BSCS in IT at University of the City of Manila<br>90 Credits towards IT degree</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PORTFOLIO-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>ASP.NET Core Web API</h3>
+                        <p>Web API I designed for my MSSA Mentorship App</p>
+                        <a href="#"><i class="fa-solid fa-square-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>.NET MAUI App</h3>
+                        <p>MSSA Mentorship Companion App</p>
+                        <a href="#"><i class="fa-solid fa-square-up-right"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Wordle WPF App</h3>
+                        <p>My version of Wordle as a Desktop Application</p>
+                        <a href="#"><i class="fa-solid fa-square-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
