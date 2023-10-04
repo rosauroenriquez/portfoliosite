@@ -71,6 +71,12 @@ nav ul li a:hover::after{
     color: #0d43c3;
 }
 
+.header-text .btn.btn2 {
+    display: inline-block;
+    background: #0d43c3;
+    font-size: 18px;
+}
+
 /*ABOUT*/
 
 #about{
