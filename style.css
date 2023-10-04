@@ -4,6 +4,9 @@
     font-family: 'Segoe UI', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     background: #080808;
@@ -250,7 +253,6 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     color: #ababab;
-    /*color: #0d43c3;*/
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -306,7 +308,7 @@ form .btn2{
 .credits a i {
     color: #0d43c3;
 }
-nav .fas{
+nav .fa-solid{
     display: none;
 }
 
@@ -316,7 +318,7 @@ nav .fas{
         background-image: url(images/phonebackground.png);
     }
     .header-text{
-        margin-top: 50%;
+        margin-top: 30%;
         font-size: 20px;
     }
     .header-text h1{
@@ -348,4 +350,34 @@ nav .fas{
         left: 25px;
         cursor: pointer;
     }
+    .subtitle{
+        font-size: 45px;
+
     }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 16px;
+    }
+    .tab-links {
+        font-size: 16px;
+    }
+    .tab-contents {
+        font-size: 14px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .credits{
+        font-size: 14px;
+    }
+    }
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
