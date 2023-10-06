@@ -30,13 +30,13 @@
         </div>
     </div>
     <!--ABOUT-->
-    <div id="about">
+    <div id="about" >
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png">
+                <div class="about-col-1 hidden" >
+                    <img src="images/user.png" >
                 </div>
-                <div class="about-col-2">
+                <div class="about-col-2 hidden">
                     <h1 class="subtitle">About Me</h1>
                     <p>
                         Hi everyone, I am Rosauro "Ross" Enriquez. I am a US Navy Veteran. I served 8 years in the Navy as a Gas Turbine Electrical Technician.
@@ -84,7 +84,7 @@
         <div class="container">
             <h1 class="subtitle">My Projects</h1>
             <div class="work-list">
-                <div class="work">
+                <div class="work hidden">
                     <img src="images/work-1.png">
                     <div class="layer">
                         <h3>ASP.NET Core Web API</h3>
@@ -92,7 +92,7 @@
                         <a href="https://github.com/rosauroenriquez/mssa-mentorship-web-api" target="_blank"><i class="fa-solid fa-square-up-right"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hidden">
                     <img src="images/work-2.png">
                     <div class="layer">
                         <h3>.NET MAUI App</h3>
@@ -100,7 +100,7 @@
                         <a href="https://github.com/rosauroenriquez/mssa-mentorship-maui-app" target="_blank"><i class="fa-solid fa-square-up-right"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hidden">
                     <img src="images/work-3.png">
                     <div class="layer">
                         <h3>Wordle WPF App</h3>
@@ -187,28 +187,21 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
-    <!--<script>
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
 
-        function handleScroll() {
-            var animatedDiv = document.getElementById('animated-div');
-            if (isElementInViewport(animatedDiv)) {
-                animatedDiv.classList.add('animate-slide-left');
-                // Remove the scroll event listener to avoid unnecessary animations
-                window.removeEventListener('scroll', handleScroll);
-            }
-        }
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
 
-        window.addEventListener('scroll', handleScroll);
-
-    </script>-->
+    </script>
 </body>
 </html>
